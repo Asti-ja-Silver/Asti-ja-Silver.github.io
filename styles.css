@@ -10,7 +10,7 @@ body {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-image: url('photo.jpg'); /* Set the photo as background */
+    background-image: url('src/photo.jpg'); /* Set the photo as background */
     background-size: cover;
     background-position: center;
     border-radius: 10px;
