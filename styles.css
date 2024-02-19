@@ -1,0 +1,63 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    position: relative;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Beige background color with transparency */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.wedding-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%); /* Convert image to black and white */
+    opacity: 0.6; /* Adjust opacity for readability */
+    border-radius: 10px;
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5em; /* Larger font size for heading */
+    margin-top: 30px; /* Increase margin for spacing */
+}
+
+p {
+    font-size: 1.2em; /* Larger font size for paragraphs */
+    margin-bottom: 20px; /* Increase margin for spacing */
+}
+
+button {
+    padding: 15px 40px; /* Larger padding for button */
+    font-size: 1.2em; /* Larger font size for button */
+    background-color: #ffcc00; /* Yellow color for button */
+    color: #333; /* Dark color for button text */
+    border: 2px solid #ffcc00; /* Yellow border for button */
+    border-radius: 30px; /* Round border for button */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for button */
+}
+
+button:hover {
+    background-color: #333; /* Dark color on hover */
+    color: #fff; /* White color on hover */
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 10px;
+    }
+}
