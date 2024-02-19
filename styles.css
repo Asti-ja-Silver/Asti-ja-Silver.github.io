@@ -4,18 +4,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.background-photo {
-    background-image: url('src/photo.jpeg'); /* Background image */
-    background-size: cover;
-    background-position: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2; /* Ensure the image is behind other content */
-}
-
 .container {
     position: relative;
     max-width: 600px;
