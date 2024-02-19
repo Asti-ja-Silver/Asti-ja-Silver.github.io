@@ -7,8 +7,9 @@ body {
     align-items: center;
     height: 100vh;
     background-image: url('src/photo.jpeg');
-    background-size: cover;
+    background-size: contain; /* Ensure the entire background photo is visible */
     background-position: center;
+    background-repeat: no-repeat;
     filter: sepia(50%); /* Sepia color filter for the background photo */
 }
 
