@@ -2,24 +2,25 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    overflow-x: hidden; /* Hide horizontal overflow caused by background photo */
+}
+
+.background-photo {
     background-image: url('src/photo.jpeg');
-    background-size: contain; /* Ensure the entire background photo is visible */
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    filter: sepia(50%); /* Sepia color filter for the background photo */
+    width: 100vw; /* Set background photo width to viewport width */
+    height: 100vh; /* Set background photo height to viewport height */
+    filter: sepia(50%); /* Apply sepia filter to background photo */
 }
 
 .container {
-    max-width: 90%;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 0.8); /* Light background color with transparency */
-    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; /* Set container width to viewport width */
+    height: 100vh; /* Set container height to viewport height */
 }
 
 .overlay {
@@ -28,8 +29,17 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Light background color with transparency */
+    border-radius: 10px;
+}
+
+.text-content {
+    text-align: center;
+    max-width: 600px; /* Limit the width of text content */
+    padding: 20px;
     background-color: rgba(255, 255, 255, 0.8); /* Light background color with transparency */
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -60,7 +70,7 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-    .container {
-        max-width: 95%;
+    .text-content {
+        max-width: 90%;
     }
 }
