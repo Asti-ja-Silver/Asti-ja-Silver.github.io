@@ -5,54 +5,47 @@ body {
 }
 
 .container {
-    position: relative;
-    max-width: 600px;
-    margin: 50px auto;
+    width: 90%; /* Set container width to 90% of the viewport width */
+    max-width: 600px; /* Set maximum width for larger screens */
+    margin: 0 auto; /* Center the container horizontally */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* Light background color with transparency */
-    border-radius: 10px;
-}
-
+/* Responsive font sizes */
 h1 {
-    color: #333;
-    font-size: 2.5em; /* Larger font size for heading */
-    margin-top: 30px; /* Increase margin for spacing */
+    font-size: 3em; /* Example font size */
 }
 
 p {
-    font-size: 1.2em; /* Larger font size for paragraphs */
-    margin-bottom: 20px; /* Increase margin for spacing */
+    font-size: 1.2em; /* Example font size */
 }
 
+/* Responsive button styles */
 button {
-    padding: 15px 40px; /* Larger padding for button */
-    font-size: 1.2em; /* Larger font size for button */
-    background-color: #ffcc00; /* Yellow color for button */
-    color: #333; /* Dark color for button text */
-    border: 2px solid #ffcc00; /* Yellow border for button */
-    border-radius: 30px; /* Round border for button */
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for button */
+    padding: 1em 2em; /* Example padding */
+    font-size: 1em; /* Example font size */
 }
 
-button:hover {
-    background-color: #333; /* Dark color on hover */
-    color: #fff; /* White color on hover */
-}
-
+/* Media queries for smaller screens */
 @media (max-width: 768px) {
     .container {
-        margin: 20px;
+        width: 95%; /* Adjust container width for smaller screens */
+        max-width: none; /* Remove maximum width */
         padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.5em; /* Adjust font size for smaller screens */
+    }
+
+    p {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    button {
+        padding: 0.8em 1.5em; /* Adjust padding for smaller screens */
+        font-size: 0.9em; /* Adjust font size for smaller screens */
     }
 }
