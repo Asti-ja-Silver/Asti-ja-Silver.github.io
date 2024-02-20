@@ -1,51 +1,86 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow-x: hidden; /* Hide horizontal overflow */
-}
-
-.background-photo {
-    position: fixed; /* Ensure the background photo is fixed */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('src/photo.jpeg');
-    background-size: cover;
-    background-position: center;
-    filter: sepia(50%); /* Apply sepia filter to background photo */
-    z-index: -1; /* Send the background photo to the back */
 }
 
 .container {
     display: flex;
+    justify-content: space-between;
+}
+
+.background-photo {
+    position: relative;
+    width: 70%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.countdown {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh; /* Set container height to viewport height */
+}
+.day-container,
+.hour-container,
+.minute-container,
+.second-container {
+    margin: 1rem; /* Adjust margins as needed */
+}
+.time {
+    text-align: center;
+}
+
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 0; 
+}
+
+h3 {
+    font-size: 0.8rem;
+    margin-top: 0;
 }
 
 .text-content {
-    text-align: center;
-    max-width: 90%; /* Limit the width of text content */
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Light background color with transparency */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(30% - 40px); /* Adjust width to accommodate padding */
+    height: 100vh;
+    overflow-x: hidden;
+    padding: 20px; /* Add padding for text */
+    padding-top: 0; /* Remove top padding */
+    background-color: rgba(255, 236, 179, 0.8);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-h1 {
+.text-content h1 {
     color: #333;
+    font-family: "Sacramento";
     font-size: 2.5em;
-    margin-top: 30px;
+    margin: 0; /* Remove margin */
 }
 
-p {
+.text-content p {
     font-size: 1.2em;
-    margin-bottom: 20px;
+    margin: 10px 0; /* Adjust margin */
 }
 
-button {
+.text-content button {
     padding: 15px 40px;
     font-size: 1.2em;
     background-color: #ffcc00;
@@ -54,15 +89,26 @@ button {
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px; /* Add margin to button */
 }
 
-button:hover {
+.text-content button:hover {
     background-color: #333;
     color: #fff;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .background-photo {
+        width: 100%;
+        height: auto;
+    }
+
     .text-content {
-        max-width: 95%;
+        width: 100%;
+        padding: 20px;
     }
 }
