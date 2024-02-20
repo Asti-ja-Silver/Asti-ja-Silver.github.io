@@ -112,7 +112,7 @@ h3 {
     .text-content {
         width: 100%; /* Occupy full width */
         margin-top: 0; /* Add margin to separate from the background */
-        padding: 20px; /* Add padding for text */
+        padding: 0; /* Add padding for text */
         box-sizing: border-box; /* Include padding in width calculation */
     }
 }
