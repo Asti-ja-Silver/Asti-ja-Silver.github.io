@@ -97,32 +97,23 @@ h3 {
     color: #fff;
 }
 
+/* For mobile devices and tablets */
 @media screen and (max-width: 768px) {
-    /* Adjustments for tablets */
+    .container {
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+    }
+
     .background-photo {
-        height: 50vh; /* Adjust as needed */
+        width: 100%; /* Occupy full width */
+        height: auto; /* Auto height */
     }
 
     .text-content {
-        position: absolute; /* Change to absolute positioning */
-        top: 50vh; /* Offset from top by the height of background */
-        width: 100%;
-        max-width: 100%; /* Ensure full width */
-        padding-top: 20px; /* Add padding for content */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    /* Adjustments for mobile devices */
-    .background-photo {
-        height: 30vh; /* Adjust as needed */
-    }
-
-    .text-content {
-        position: absolute; /* Change to absolute positioning */
-        top: 30vh; /* Offset from top by the height of background */
-        width: 100%;
-        max-width: 100%; /* Ensure full width */
-        padding-top: 20px; /* Add padding for content */
+        position: relative; /* Change position to relative */
+        width: 100%; /* Occupy full width */
+        margin-top: 20px; /* Add margin to separate from the background */
+        padding: 20px; /* Add padding for text */
+        box-sizing: border-box; /* Include padding in width calculation */
     }
 }
