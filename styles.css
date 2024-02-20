@@ -100,7 +100,7 @@ h3 {
 /* For mobile devices and tablets */
 @media screen and (max-width: 768px) {
     .container {
-        flex-direction: column;
+        flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items horizontally */
     }
 
@@ -110,7 +110,6 @@ h3 {
     }
 
     .text-content {
-        position: relative; /* Change position to relative */
         width: 100%; /* Occupy full width */
         margin-top: 20px; /* Add margin to separate from the background */
         padding: 20px; /* Add padding for text */
