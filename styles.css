@@ -52,7 +52,7 @@ h3 {
 }
 
 .text-content {
-    position: fixed;
+    position: fixed; 
     top: 0;
     right: 0;
     width: calc(30% - 40px); /* Adjust width to accommodate padding */
@@ -110,6 +110,7 @@ h3 {
     }
 
     .text-content {
+        position: relative;
         width: 100%; /* Occupy full width */
         margin-top: 0; /* Add margin to separate from the background */
         padding: 20px; /* Add padding for text */
