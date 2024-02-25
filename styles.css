@@ -197,4 +197,8 @@ h3 {
         padding: 20px; /* Add padding for text */
         box-sizing: border-box; /* Include padding in width calculation */
     }
+
+    .custom-text {
+        font-size: 60px;
+    }
 }
