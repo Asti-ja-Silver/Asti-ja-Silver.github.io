@@ -3,7 +3,30 @@ body {
     padding: 0;
     overflow-x: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(242, 230, 204);
 }
+
+@font-face {
+    font-family: 'AB';
+    src: url('AlexBrush-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SC';
+    src: url('SCRIPTIN.ttf') format('truetype');
+}
+
+.custom-text {
+    font-family: 'AB', sans-serif;
+    font-size: 80px;
+    color: black;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5); /* Optional: Add a shadow for depth */
+    position: absolute; 
+    top: 40px;
+    left: 40px; 
+    z-index: 1;
+}
+
 
 .container {
     display: flex;
@@ -23,6 +46,25 @@ body {
     object-fit: cover;
 }
 
+
+.black-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px; /* Adjust the height as needed */
+    /* background-color: rgba(0, 0, 0, 0.3);  *//* Semi-transparent black color */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.white-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%; /* Adjust the height as needed */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 90%, rgba(242, 230, 204, 1) 100%);
+    z-index: 2; /* Ensure the white overlay is on top */
+}
+
 .countdown {
     position: absolute;
     bottom: 0;
@@ -34,10 +76,14 @@ body {
 .hour-container,
 .minute-container,
 .second-container {
-    margin: 1rem; /* Adjust margins as needed */
+    margin: 1rem; 
 }
+
 .time {
+    color: black; 
+    /* font-family: "Sacramento"; */
     text-align: center;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5); 
 }
 
 
@@ -55,12 +101,12 @@ h3 {
     position: fixed; 
     top: 0;
     right: 0;
-    width: calc(30% - 40px); /* Adjust width to accommodate padding */
+    width: calc(30% - 40px);
     height: 100vh;
     overflow-x: hidden;
     padding: 20px; /* Add padding for text */
     padding-top: 0; /* Remove top padding */
-    background-color: rgba(255, 236, 179, 0.8);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 90%, rgba(242, 230, 204, 1) 100%);
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -68,37 +114,71 @@ h3 {
     align-items: center;
 }
 
-.text-content h1 {
+.text-wrapper {
+    border: 2px solid #d2b48c;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    background-color: rgba(255, 236, 179, 0.3);
+    text-align: center;
+}
+
+.text-wrapper h1 {
     color: #333;
     font-family: "Sacramento";
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 0; /* Remove margin */
 }
 
-.text-content p {
+.text-wrapper p {
     font-size: 1.2em;
     margin: 10px 0; /* Adjust margin */
 }
 
-.text-content button {
+.text-wrapper button {
     padding: 15px 40px;
     font-size: 1.2em;
-    background-color: #ffcc00;
     color: #333;
-    border: 2px solid #ffcc00;
+    border: 2px solid transparent; /* Set border to transparent initially */
     border-radius: 30px;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    margin-top: 20px; /* Add margin to button */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    margin-top: 20px;
+    background-image: linear-gradient(to bottom, #f9cca1, #c3966c); /* Set background gradient */
+    background-clip: padding-box, border-box; 
 }
 
-.text-content button:hover {
-    background-color: #333;
-    color: #fff;
+.text-wrapper button:hover {
+    background-color: #d78b44;
+    border-color: transparent;
+    color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
 }
+
+.location-text {
+    position: relative; /* Make the position relative */
+    position: relative;
+    display: inline-block; /* Ensure the span takes only the required width */
+    padding-left: 20px;
+}
+
+.location-icon {
+    position: absolute; /* Position the icon absolutely */
+    left: 0;
+    transform: translateY(-85%); /* Adjust to vertically center */
+    margin-right: 50px; /* Add some space between the text and the icon */
+    width: auto; /* Let the browser decide the width */
+    height: 1em; /* Match the height of the text */
+}
+
 
 /* For mobile devices and tablets */
 @media screen and (max-width: 768px) {
+
+    .white-overlay {
+        display: none; /* Hide the white overlay on mobile devices */
+    }
+
     .container {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items horizontally */
@@ -106,7 +186,8 @@ h3 {
 
     .background-photo {
         width: 100%; /* Occupy full width */
-        height: auto; /* Auto height */
+        height: 120vh; /* Adjust the height */
+        overflow: hidden; /* Hide any overflow content */
     }
 
     .text-content {
