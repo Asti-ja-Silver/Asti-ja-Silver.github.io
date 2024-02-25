@@ -13,6 +13,12 @@ const second = document.querySelector(".second");
 const targetTime = new Date("September 20, 2024").getTime();
 // console.log(targetTime);
 
+    // Set initial text content to empty strings
+    day.innerText = '';
+    hour.innerText = '';
+    minute.innerText = '';
+    second.innerText = '';
+
 function countdown(){
     const currentTime = new Date().getTime();
     const difference = targetTime - currentTime;
