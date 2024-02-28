@@ -208,12 +208,15 @@ a:visited {
 }
 
 .button-list li::before {
-    content: "\2665"; /* Add bullet character */
-    color: #c3966c !important; /* Set bullet color */
-    margin-right: 10px; /* Add space between bullet and text */
+    content: ""; /* Clear the default content */
+    display: inline-block;
+    width: 14px; 
+    height: 14px;
+    margin-right: 10px; 
+    background-image: url('src/heart.png'); 
+    background-size: contain; /* Ensure the image fits within the dimensions */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
 }
-
-
 
 
 
