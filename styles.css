@@ -114,6 +114,11 @@ a {
     color: black;
 }
 
+a:visited {
+    color: black;
+}
+
+
 .text-content {
     /* font-family: 'AB', sans-serif; */
     position: absolute; 
