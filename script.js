@@ -3,6 +3,22 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = 'https://forms.gle/aq9u7r7q79WjRCY47';
     });
 
+// Function to adjust the height of the text content container
+function adjustTextContentHeight() {
+    var backgroundPhotoHeight = document.querySelector('.background-photo').offsetHeight;
+    var textContent = document.querySelector('.text-content');
+    textContent.style.height = (backgroundPhotoHeight - 120) + 'px'; // Adjust 120 as needed for the countdown height
+    // Scroll to the top of the text content container
+    textContent.scrollTop = 0;
+}
+
+// Call the function initially
+adjustTextContentHeight();
+
+// Also call the function whenever the window is resized
+window.onresize = function() {
+    adjustTextContentHeight();
+};
 
 // countdown
 const day = document.querySelector(".day");

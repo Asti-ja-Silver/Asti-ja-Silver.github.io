@@ -11,10 +11,10 @@ body {
     src: url('AlexBrush-Regular.ttf') format('truetype');
 }
 
-@font-face {
+/* @font-face {
     font-family: 'SC';
     src: url('SCRIPTIN.ttf') format('truetype');
-}
+} */
 
 .custom-text {
     font-family: 'AB', sans-serif;
@@ -25,6 +25,12 @@ body {
     top: 40px;
     left: 40px; 
     z-index: 1;
+}
+
+.custom-text-font {
+    font-family: 'AB', sans-serif;
+    font-size: 35px;
+    color: black;
 }
 
 
@@ -42,8 +48,14 @@ body {
 
 .background-photo img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
 }
 
 
@@ -80,10 +92,11 @@ body {
 }
 
 .time {
-    color: black; 
+    color: rgb(221, 183, 144); 
     /* font-family: "Sacramento"; */
     text-align: center;
-    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5); 
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); 
+    z-index: 2;
 }
 
 
@@ -93,24 +106,28 @@ h2 {
 }
 
 h3 {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-top: 0;
 }
 
+a {
+    color: black;
+}
+
 .text-content {
-    position: fixed; 
+    /* font-family: 'AB', sans-serif; */
+    position: absolute; 
     top: 0;
     right: 0;
     width: calc(30% - 40px);
-    height: 100vh;
-    overflow-x: hidden;
-    padding: 20px; /* Add padding for text */
-    padding-top: 0; /* Remove top padding */
+    height: 100%;
+    overflow-y: auto;
+    padding: 60px 20px 20px; 
     background: linear-gradient(to left, rgba(255, 255, 255, 0) 90%, rgba(242, 230, 204, 1) 100%);
     z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: flex-start; */
     align-items: center;
 }
 
@@ -121,13 +138,16 @@ h3 {
     padding: 40px;
     background-color: rgba(255, 236, 179, 0.3);
     text-align: center;
+    margin-top: auto; /* Push the text wrapper to the top */
+    margin-bottom: auto;
 }
 
 .text-wrapper h1 {
-    color: #333;
+    color: #c3966c;
     font-family: "Sacramento";
-    font-size: 2em;
-    margin: 0; /* Remove margin */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15); 
+    font-size: 1.8em;
+    margin: 0; 
 }
 
 .text-wrapper p {
@@ -171,9 +191,28 @@ h3 {
     height: 1em; /* Match the height of the text */
 }
 
+.button-list {
+    list-style: none; 
+    padding: 0;
+}
+
+.button-list li {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.button-list li::before {
+    content: "\2665"; /* Add bullet character */
+    color: #c3966c; /* Set bullet color */
+    margin-right: 10px; /* Add space between bullet and text */
+}
+
+
+
+
 
 /* For mobile devices and tablets */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1150px) {
 
     .white-overlay {
         display: none; /* Hide the white overlay on mobile devices */
@@ -193,7 +232,7 @@ h3 {
     .text-content {
         position: relative;
         width: 100%; /* Occupy full width */
-        margin-top: 0; /* Add margin to separate from the background */
+        margin-top: 20px; /* Add margin to separate from the background */
         padding: 20px; /* Add padding for text */
         box-sizing: border-box; /* Include padding in width calculation */
     }
