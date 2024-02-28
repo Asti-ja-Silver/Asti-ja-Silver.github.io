@@ -249,4 +249,19 @@ a:visited {
         left: 20px; 
     }
 
+    .button-list {
+        list-style: none; 
+        padding: 0;
+    }
+    
+    .button-list li {
+        margin-bottom: 10px;
+        font-size: 1.2em;
+    }
+    
+    .button-list li::before {
+        content: "\2665"; /* Add bullet character */
+        color: #c3966c; /* Set bullet color */
+        margin-right: 10px; /* Add space between bullet and text */
+    }
 }
