@@ -231,7 +231,7 @@ a:visited {
 
     .background-photo {
         width: 100%; /* Occupy full width */
-        height: 85vh; /* Adjust the height */
+        height: 80vh; /* Adjust the height */
         overflow: hidden; /* Hide any overflow content */
     }
 
@@ -245,6 +245,8 @@ a:visited {
 
     .custom-text {
         font-size: 60px;
+        top: 20px;
+        left: 20px; 
     }
 
 }
