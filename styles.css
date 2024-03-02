@@ -247,12 +247,15 @@ a:visited {
     .countdown {
         width: 100%;
         padding: 0 20px; /* left and right */
+        box-sizing: border-box;
     }
 
     .text-content {
         position: relative;
         width: 100%;
-        padding: 20px;
+        margin-top: 20px; 
+        padding: 20px; 
+        box-sizing: border-box;
     }
 
     .custom-text {
