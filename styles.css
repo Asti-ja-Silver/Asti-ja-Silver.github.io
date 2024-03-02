@@ -246,7 +246,7 @@ a:visited {
 
     .countdown {
         width: 100%;
-        padding: 0 20px; /* left and right */
+        padding: 40px 20px;
         box-sizing: border-box;
     }
 
