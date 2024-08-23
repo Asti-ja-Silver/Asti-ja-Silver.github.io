@@ -100,6 +100,14 @@ body {
     z-index: 2;
 }
 
+.end-message {
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(221, 183, 144);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+    margin-top: -10%;
+}
+
 
 h2 {
     font-size: 3rem;

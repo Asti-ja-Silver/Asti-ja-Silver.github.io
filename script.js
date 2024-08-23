@@ -29,23 +29,23 @@ const hour = document.querySelector(".hour");
 const minute = document.querySelector(".minute");
 const second = document.querySelector(".second");
 
-const targetTime = new Date("September 20, 2024").getTime();
+const targetTime = new Date("August 24, 2024 00:27:00 GMT+0300").getTime();
 // console.log(targetTime);
-
-    // Set initial text content to empty strings
-    day.innerText = '';
-    hour.innerText = '';
-    minute.innerText = '';
-    second.innerText = '';
 
 function countdown(){
     const currentTime = new Date().getTime();
     const difference = targetTime - currentTime;
-    // console.log(difference);
+    
+    if (difference <= 0) {
+        // When countdown finishes
+        day.innerText = '';
+        hour.innerText = '';
+        minute.innerText = '';
+        second.innerText = '';
 
-    // 1hr = 60 min
-    // 1 min = 60 sec 
-    // 1 sec = 1000 ms
+        document.querySelector('.countdown').innerHTML = "<div class='end-message'><h2>Jeeee! Hr ja Pr. Butlers!</h2></div>";
+            return;
+    }
 
     let days = Math.floor(difference/(1000*60*60*24));
     let hours = Math.floor(difference%(1000*60*60*24)/(1000*60*60));
