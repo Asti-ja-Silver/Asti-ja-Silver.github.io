@@ -29,7 +29,7 @@ const hour = document.querySelector(".hour");
 const minute = document.querySelector(".minute");
 const second = document.querySelector(".second");
 
-const targetTime = new Date("August 24, 2024 00:27:00 GMT+0300").getTime();
+const targetTime = new Date("September 20, 2024 00:16:00 GMT+0300").getTime();
 // console.log(targetTime);
 
 function countdown(){
