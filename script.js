@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('rsvpButton').addEventListener('click', function() {
+    /* document.getElementById('rsvpButton').addEventListener('click', function() {
         window.location.href = 'https://forms.gle/aq9u7r7q79WjRCY47';
-    });
+    }); */
 
     function adjustTextContentHeight() {
         var backgroundPhotoHeight = document.querySelector('.background-photo').offsetHeight;
