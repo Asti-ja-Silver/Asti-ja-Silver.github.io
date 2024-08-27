@@ -108,7 +108,8 @@ a:visited {
   .text-wrapper {
     max-width: 90%; 
     width: auto; 
-    margin: 10px auto;
+    margin: 10px 5%;
     padding: 20px;
+    box-sizing: border-box;
   }
 }
