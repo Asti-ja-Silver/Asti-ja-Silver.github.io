@@ -60,7 +60,7 @@ body::before {
 }
 
 .custom-text {
-  font-size: 50px;
+  font-size: 60px;
   text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
 }
 
@@ -89,9 +89,19 @@ a:visited {
 }
 
 .map-container img {
-  width: 90%; /* Makes the map image responsive to its container */
+  width: 80%; /* Makes the map image responsive to its container */
   max-width: 600px; 
   height: auto; 
   border-radius: 20px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+@media (max-width: 600px) {
+  .custom-text {
+    font-size: 45px;
+  }
+
+  .map-container img {
+    max-width: 90%;
+  }
 }
