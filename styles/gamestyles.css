@@ -89,7 +89,7 @@ a:visited {
 }
 
 .map-container img {
-  width: 100%; /* Makes the map image responsive to its container */
+  width: 80%; /* Makes the map image responsive to its container */
   max-width: 600px; 
   height: auto; 
   border-radius: 20px; 
