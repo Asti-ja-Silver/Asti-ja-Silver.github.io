@@ -221,7 +221,7 @@ a:visited {
     width: 14px; 
     height: 14px;
     margin-right: 10px; 
-    background-image: url('src/heart.png'); 
+    background-image: url('../src/heart.png'); 
     background-size: contain; /* Ensure the image fits within the dimensions */
     background-repeat: no-repeat; /* Prevent the image from repeating */
 }
