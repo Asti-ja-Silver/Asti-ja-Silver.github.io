@@ -106,9 +106,9 @@ a:visited {
   }
 
   .text-wrapper {
-    max-width: 90vw; 
+    max-width: 90%; 
     width: auto; 
-    margin: 20px auto;
+    margin: 10px auto;
     padding: 20px;
   }
 }
