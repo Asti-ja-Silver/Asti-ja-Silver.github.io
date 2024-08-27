@@ -104,4 +104,11 @@ a:visited {
   .map-container img {
     max-width: 90%;
   }
+
+  .text-wrapper {
+    max-width: 90vw; 
+    width: auto; 
+    margin: 20px auto;
+    padding: 20px;
+  }
 }
