@@ -29,7 +29,7 @@ const hour = document.querySelector(".hour");
 const minute = document.querySelector(".minute");
 const second = document.querySelector(".second");
 
-const targetTime = new Date("September 20, 2024 00:16:00 GMT+0300").getTime();
+const targetTime = new Date("August 27, 2024 15:00:00 GMT+0300").getTime();
 // console.log(targetTime);
 
 function countdown(){
@@ -43,7 +43,22 @@ function countdown(){
         minute.innerText = '';
         second.innerText = '';
 
-        document.querySelector('.countdown').innerHTML = "<div class='end-message'><h2>Jeeee! Hr ja Pr. Butlers!</h2></div>";
+        const isMobile = window.innerWidth <= 1150;
+
+            const endMessageDiv = document.createElement('div');
+            endMessageDiv.className = 'end-message';
+
+            const message = document.createElement('h2');
+            if (isMobile) {
+                message.innerHTML = 'Jeeee!<br>Hr ja Pr. Butlers!';
+            } else {
+                message.innerHTML = 'Jeeee! Hr ja Pr. Butlers!';
+            }
+
+            endMessageDiv.appendChild(message);
+
+            document.querySelector('.countdown').innerHTML = ''; // Clear existing countdown
+            document.querySelector('.countdown').appendChild(endMessageDiv);
             return;
     }
 

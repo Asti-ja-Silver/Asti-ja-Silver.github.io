@@ -105,7 +105,7 @@ body {
     font-size: 2rem;
     color: rgb(221, 183, 144);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
-    margin-top: -10%;
+    margin-bottom: 40px;
 }
 
 
@@ -274,5 +274,9 @@ a:visited {
 
     h2 {
         font-size: 2.5rem;
+    }
+
+    .end-message {
+        margin-bottom: 20px;
     }
 }
