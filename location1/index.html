@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Location 1</title>
     <link rel="stylesheet" href="../styles/gamestyles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
     <div>
@@ -15,10 +16,9 @@
             <h1>Esimene lokatsioon:</h1>
             <p><b>Põlluke</b></p>
 
-            <!-- Google Maps Static Image -->
             <div class="map-container">
-                <img src="https://maps.googleapis.com/maps/api/staticmap?center=Uue-Saaluse+matkarada,Estonia&zoom=15&size=400x300&maptype=roadmap&markers=color:red%7Clabel:P%7C57.7458889,27.1047735&key=AIzaSyCuR8723Sv9Gt_y9bktDwimg9XEVLKQkkM" alt="Kaart Uue-Saaluse matkarada">
-            </div>
+                <div id="map"></div>
+              </div>
 
             <p>Kasuta allolevat linki, et jõuda õigesse kohta:</p>
             <a href="https://www.waze.com/live-map/directions/ee/voru-maakond/uue-saaluse/uue-saaluse-matkarada?to=place.ChIJ2WTnskrx6kYRexw1QR9T1Fk&from=place.w.17760833.177477262.14833385&utm_medium=lm_share_directions&utm_campaign=default&utm_source=waze_website" target="_blank">Waze</a>
@@ -28,5 +28,5 @@
             <p>Kui jõuad kohale, soorita väike ülesanne ja skänni uus QR kood, et leida järgmine lokatsioon!</p>
         </div>
     </div>
-</body>
+    <script src="map.js"></script></body>
 </html>

@@ -85,13 +85,15 @@ a:visited {
 
 .map-container {
   margin-top: 20px; 
+  display: flex; /* Use Flexbox to center the child element */
+  justify-content: center; /* Center horizontally */
   text-align: center; 
 }
 
-.map-container img {
-  width: 80%; /* Makes the map image responsive to its container */
+#map {
+  width: 80%; /* This percentage width ensures responsiveness */
   max-width: 600px; 
-  height: auto; 
+  height: 300px; /* Fixed height to match the style attribute in HTML */
   border-radius: 20px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
