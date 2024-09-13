@@ -18,6 +18,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   L.marker([57.73296606485817, 27.0848579323196], { icon: pointerIcon }).addTo(map)
-    .bindPopup('<b>Põlluke</b><br>Kohtume siin!')
+    .bindPopup('<b>Põld</b><br>Kohtume siin!')
     .openPopup();
 });
