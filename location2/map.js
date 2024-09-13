@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  const map = L.map('map').setView([57.74093728357131, 27.102365484167596], 15);
+  const map = L.map('map').setView([57.73271990222284, 27.098822568822847], 15);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     popupAnchor: [0, -50]   // Point from which the popup should open relative to the iconAnchor
   });
 
-  L.marker([57.74093728357131, 27.102365484167596], { icon: pointerIcon }).addTo(map)
+  L.marker([57.73271990222284, 27.098822568822847], { icon: pointerIcon }).addTo(map)
     .bindPopup('<b>Võsa</b><br>Kohtume siin!')
     .openPopup();
 });
