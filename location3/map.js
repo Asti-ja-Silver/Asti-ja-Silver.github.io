@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const pointerIcon = L.icon({
     iconUrl: '../src/pointer.png',
     iconSize: [40, 40],
-    iconAnchor: [25, 50],  // horizontal offset, vertical offset
-    popupAnchor: [0, -50]   // Point from which the popup should open relative to the iconAnchor
+    iconAnchor: [20, 40],  // horizontal offset, vertical offset
+    popupAnchor: [0, -40]   // Point from which the popup should open relative to the iconAnchor
   });
 
   L.marker([57.745671381399724, 27.105280413355057], { icon: pointerIcon }).addTo(map)
